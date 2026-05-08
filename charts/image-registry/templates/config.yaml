@@ -6,4 +6,5 @@ spec:
   managementState: Managed
   replicas: 1
   storage:
-    emptyDir: {}
+    pvc:
+      claim: image-registry-storage

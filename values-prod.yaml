@@ -93,3 +93,9 @@ clusterGroup:
           jsonPointers:
             - /spec/host
             - /spec/alternateBackends
+
+  imperative:
+    jobs:
+      - name: configure-registry-pull-secret
+        playbook: ansible/playbooks/configure-registry-pull-secret.yml
+        timeout: 300
