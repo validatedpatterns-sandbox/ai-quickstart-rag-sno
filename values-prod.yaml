@@ -46,12 +46,12 @@ clusterGroup:
 
     pattern-secrets:
       name: pattern-secrets
-      namespace: ai-quickstart-rag-prod
+      namespace: ai-quickstart-rag-sno-prod
       path: charts/pattern-secrets
 
     data-science-cluster:
       name: data-science-cluster
-      namespace: ai-quickstart-rag-prod
+      namespace: ai-quickstart-rag-sno-prod
       path: charts/dsc
 
     lvms:
@@ -66,12 +66,12 @@ clusterGroup:
 
     bento-box-links:
       name: bento-box-links
-      namespace: ai-quickstart-rag-prod
+      namespace: ai-quickstart-rag-sno-prod
       path: charts/bento-box-links
 
     rag-quickstart:
       name: rag-quickstart
-      namespace: ai-quickstart-rag-prod
+      namespace: ai-quickstart-rag-sno-prod
       repoURL: https://github.com/rh-ai-quickstart/RAG
       chartVersion: main
       path: deploy/helm/rag
