@@ -21,3 +21,28 @@ subjects:
   - kind: ServiceAccount
     name: imperative-sa
     namespace: imperative
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: imperative-sa-pull-secret
+  namespace: openshift-config
+rules:
+  - apiGroups: [""]
+    resources: ["secrets"]
+    resourceNames: ["pull-secret"]
+    verbs: ["get", "patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: imperative-sa-pull-secret
+  namespace: openshift-config
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: imperative-sa-pull-secret
+subjects:
+  - kind: ServiceAccount
+    name: imperative-sa
+    namespace: imperative
