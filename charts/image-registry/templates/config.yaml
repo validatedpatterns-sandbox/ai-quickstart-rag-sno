@@ -5,6 +5,7 @@ metadata:
 spec:
   managementState: Managed
   replicas: 1
+  rolloutStrategy: Recreate
   storage:
     pvc:
       claim: image-registry-storage
